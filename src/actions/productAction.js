@@ -8,11 +8,11 @@ import {
   PRODUCT_DETAILS_SUCCESS,
 } from "../constants/productConstant";
 
-export const getProducts = (keyword="") => async (dispatch) => {
+export const getProducts = () => async (dispatch) => {
   try {
     dispatch({ type: ALL_PRODUCTS_REQUEST });
 
-    const response = await fetch(`https://fakestoreapi.com/products?keyword=${keyword}`);
+    const response = await fetch(`https://fakestoreapi.com/products`);
     const data = await response.json();
     dispatch({
       type: ALL_PRODUCTS_SUCCESS,

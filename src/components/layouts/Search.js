@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "../../App.css";
 import { useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
 
 const Search = () => {
   const [searchField, setSearchField] = useState("");
